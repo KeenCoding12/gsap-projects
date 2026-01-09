@@ -18,7 +18,6 @@ export default function HorizontalScroll() {
   useGSAP(
     () => {
       const imgs = imagesRef.current;
-      // Animate horizontal movement based on vertical scroll
       gsap.to(imgs, {
         x: () => -(imgs.scrollWidth - window.innerWidth),
         scrollTrigger: {
@@ -27,7 +26,7 @@ export default function HorizontalScroll() {
           scrub: 1, // Smoothly link scroll position to animation
           start: "top top", // Start when top of section hits top of viewport
           end: () => `+=${imgs.scrollWidth}`, // Scroll distance based on content width
-          markers: true, // Debug markers (remove in production)
+          // markers: true,
         },
       });
     },
