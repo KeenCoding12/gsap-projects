@@ -1,0 +1,12 @@
+/* Goole font */
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-titanOne: "Titan One", sans-serif;
+}
+
+body {
+  @apply font-titanOne bg-neutral-950 text-white;
+}
